@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITE311 Project</title>
+    <title><?= $title ?? 'ITE311 Project' ?></title>
     
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,17 +41,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?= base_url('/') ?>">
+                        <a class="nav-link <?= ($active_page ?? '') == 'home' ? 'active' : '' ?>" href="<?= base_url('/') ?>">
                             <i class="bi bi-house-door me-1"></i>Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/about') ?>">
+                        <a class="nav-link <?= ($active_page ?? '') == 'about' ? 'active' : '' ?>" href="<?= base_url('/about') ?>">
                             <i class="bi bi-info-circle me-1"></i>About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/contact') ?>">
+                        <a class="nav-link <?= ($active_page ?? '') == 'contact' ? 'active' : '' ?>" href="<?= base_url('/contact') ?>">
                             <i class="bi bi-envelope me-1"></i>Contact
                         </a>
                     </li>
@@ -63,16 +63,11 @@
     <!-- Main Content Area -->
     <div class="main-content">
         <div class="container py-5">
-            <!-- Your content goes here -->
-            <div class="text-center">
-                <h2 class="text-muted">Welcome to ITE311 Project</h2>
-                <p class="text-muted">Add your page content here</p>
-            </div>
+            <?= $content ?? '' ?>
         </div>
     </div>
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
 </body>
 </html>

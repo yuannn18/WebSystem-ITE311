@@ -8,4 +8,14 @@ class Home extends BaseController
     {
         return view('template');
     }
+    
+    public function about(): string
+    {
+        return view('about');
+    }
+    
+    public function contact(): string
+    {
+        return view('contact');
+    }
 }
