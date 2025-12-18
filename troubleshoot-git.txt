@@ -1,0 +1,35 @@
+# TROUBLESHOOTING - If files aren't pushing to GitHub
+
+## STEP 1: Configure Git first (only need to do this once)
+git config --global user.name "yuannn18"
+git config --global user.email "your-email@example.com"
+
+## STEP 2: Check if Git is working
+git --version
+
+## STEP 3: Check repository status
+git status
+
+## STEP 4: Check if files are added
+git ls-files
+
+## STEP 5: Check remotes
+git remote -v
+
+## STEP 6: Check if committed
+git log --oneline
+
+## COMMON ISSUES:
+- If "git not recognized": Restart terminal/IDE after installing Git
+- If authentication fails: Use GitHub Personal Access Token instead of password
+- If "nothing to commit": Run `git add .` first
+- If "remote already exists": Run `git remote remove origin` then add again
+
+## FULL COMMANDS TO TRY:
+git config --global user.name "yuannn18"
+git config --global user.email "your-email@example.com"
+git init
+git add .
+git commit -m "Initial commit: CodeIgniter 4 with Bootstrap integration"
+git remote add origin https://github.com/yuannn18/WebSystem-ITE311.git
+git push -u origin main

@@ -1,0 +1,18 @@
+# FINAL PUSH COMMANDS - Run these in your local terminal/command prompt:
+
+# 1. Initialize Git repository
+git init
+
+# 2. Add all files to staging
+git add .
+
+# 3. Commit with message
+git commit -m "Initial commit: CodeIgniter 4 with Bootstrap integration"
+
+# 4. Add your GitHub repository
+git remote add origin https://github.com/yuannn18/WebSystem-ITE311.git
+
+# 5. Push to GitHub
+git push -u origin main
+
+# Your project will be available at: https://github.com/yuannn18/WebSystem-ITE311

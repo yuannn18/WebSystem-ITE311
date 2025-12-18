@@ -1,0 +1,16 @@
+# Run these commands after restarting your terminal/IDE:
+
+# 1. Initialize Git
+git init
+
+# 2. Add all files
+git add .
+
+# 3. Commit changes
+git commit -m "Initial commit: CodeIgniter 4 with Bootstrap integration"
+
+# 4. Add your GitHub repo
+git remote add origin https://github.com/yuannn18/WebSystem-ITE311.git
+
+# 5. Push to GitHub
+git push -u origin main
